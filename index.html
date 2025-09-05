@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+
+  <div class="w-full max-w-2xl bg-gray-800 p-6 rounded-2xl shadow-lg">
+    <h1 class="text-2xl font-bold text-center mb-6">Todo List</h1>
+
+    <!-- Input Form -->
+    <form id="todo-form" class="flex gap-2 mb-4">
+      <input type="text" id="task-input" placeholder="Add a todo..."
+        class="flex-1 px-3 py-2 rounded-lg text-black focus:outline-none" required>
+      <input type="date" id="date-input"
+        class="px-3 py-2 rounded-lg text-black focus:outline-none" required>
+      <button type="submit"
+        class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg font-bold">+</button>
+    </form>
+
+    <!-- Filter & Delete All -->
+    <div class="flex justify-between mb-4">
+      <button id="filter-btn" class="bg-yellow-500 hover:bg-yellow-600 px-3 py-1 rounded-lg">Filter</button>
+      <button id="delete-all-btn" class="bg-red-500 hover:bg-red-600 px-3 py-1 rounded-lg">Delete All</button>
+    </div>
+
+    <!-- Table -->
+    <table class="w-full text-center border-collapse">
+      <thead>
+        <tr class="bg-gray-700">
+          <th class="p-2">Task</th>
+          <th class="p-2">Due Date</th>
+          <th class="p-2">Status</th>
+          <th class="p-2">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="todo-list">
+        <tr>
+          <td colspan="4" class="p-4 text-gray-400">No task found</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

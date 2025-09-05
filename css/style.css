@@ -1,0 +1,10 @@
+/* Tambahan styling custom */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+button {
+  transition: 0.3s;
+}
+button:active {
+  transform: scale(0.95);
+}
